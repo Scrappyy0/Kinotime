@@ -7,19 +7,27 @@ import TanstackQueryProvider from '@/components/providers/TanstackQueryProvider'
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-	title: 'Kinotime - Stream all your favourite Movies, TV Shows, and Anime',
+	title: 'Kinotime - Stream all the kino into your silly eyeballs KINO',
 	description:
-		'Discover and stream your favorite movies, TV series, and anime on Watvh TV. Enjoy unlimited entertainment with our vast library of content.',
-	keywords: ['streaming', 'movies', 'TV shows', 'anime', 'entertainment', 'Kinotime'],
+		'Kino tv and films inbound for your eyeballs.',
+	keywords: ['streaming', 'movies', 'TV shows', 'entertainment', 'Kinotime'],
 	authors: [{ name: 'Kinotime Team' }],
 	creator: 'Kinolicious',
 	publisher: 'Kinotime',
 	openGraph: {
-		title: 'Kinotime - Cinema ready and inbound',
+		title: 'Kinotime - Pure Cinema',
 		description:
-			'Stream the latest movies, binge-worthy TV shows, and popular anime series on Watvh TV. Start watching now!',
+			'Stream the latest movies, TV shows. KINO Anytime, All the time.',
 		url: 'https://www.kinotime.vercel.app',
 		siteName: 'Kinotime',
+		images: [
+			{
+			  url: "/kino2.png", // Change this to your actual image URL
+			  width: 800,
+			  height: 800,
+			  alt: "Kinotime Preview",
+			},
+		  ],
 		type: 'website',
 	},
 	viewport: {

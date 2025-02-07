@@ -47,7 +47,7 @@ export default function Navbar(props: { text?: string }) {
         <Button> Back</Button>
         <Link href={"/"}>
           <Button className="w-fit whitespace-nowrap" variant={"link"}>
-            WATVH-TV
+            kino
           </Button>
         </Link>
         <div className="hidden md:flex gap-2">

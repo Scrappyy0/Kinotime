@@ -10,7 +10,7 @@ export default function Page(params: any) {
           <title>{params.searchParams.title}</title>
           <meta
             name="description"
-            content="Watch any TV / Movies / Anime with Watvh"
+            content="Kinotime"
           />
         </Head>
         <div className="mx-auto max-w-6xl px-4  md:pt-4 space-y-8">
