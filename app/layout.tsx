@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';""
 
 import { Toaster } from '@/components/ui/toaster';
-import { Header } from '@/components/common/header';
+
 import TanstackQueryProvider from '@/components/providers/TanstackQueryProvider';
 import { Suspense } from 'react';
 
@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'Kinotime - Pure Cinema',
 		description:
-			'Stream the latest movies and TV shows. KINO Anytime, All the time.',
+			'Non-stop entertainment. No limits. Just KINO.',
 		url: 'https://www.kinotime.vercel.app',
 		siteName: 'Kinotime',
 		images: [
 			{
-			  url: "https://kinotime.vercel.app/kino2.png", // Change this to your actual image URL
-			  width: 800,
-			  height: 800,
+			  url: "https://kinotime.vercel.app/kino2.png", 
+			  width: 1600,
+			  height: 1600,
 			  alt: "Kinotime Preview",
 			},
 		  ],

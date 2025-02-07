@@ -46,7 +46,7 @@ export default function Episode(props: EpisodeProps) {
 	
 		{
 			name: 'vidsrc.cc/v3',
-			label: 'VidSRC',
+			label: 'VidBD',
 			ads: 'false',
 			url: generateUrl('vidsrc.cc/v3', type, id, seasonNumber, episodeNumber),
 		},
@@ -74,6 +74,13 @@ export default function Episode(props: EpisodeProps) {
 			label: 'Lstream',
 			position: 4,
 			url: generateUrl('vidsrc.vip', type, id, seasonNumber, episodeNumber),
+		},
+
+		{
+			name: 'vidsrc.pro',
+			label: 'VidSRC',
+			position: 1,
+			url: generateUrl('vidsrc.pro', type, id, seasonNumber, episodeNumber),
 		},
 
 		
