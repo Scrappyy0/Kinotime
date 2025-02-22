@@ -32,8 +32,14 @@ export default function Episode(props: EpisodeProps) {
 			? `https://${domain}/embed/${type}/${id}`
 			: `https://${domain}/embed/tv/${id}/${seasonNumber}/${episodeNumber}`;
 	};
-
 	const sourcesMap = [
+		{
+			name: 'vidbinge',
+			label: 'Vidbinge',
+			ads: 'false',
+			url: generateUrl('vidbinge.dev', type, id, seasonNumber, episodeNumber),
+		},
+	
 		{
 			name: 'vidlink',
 			label: 'VidLink',
@@ -43,15 +49,23 @@ export default function Episode(props: EpisodeProps) {
 					? `https://vidlink.pro/movie/${id}`
 					: `https://vidlink.pro/tv/${id}/${seasonNumber}/${episodeNumber}?title=true`,
 		},
-	
+		{
+			name: 'vidsrc.xyz',
+			label: 'VidSRC',
+			position: 5,
+			url: generateUrl('vidsrc.to', type, id, seasonNumber, episodeNumber),
+		},
+		
+
 		{
 			name: 'vidsrc.cc/v3',
-			label: 'VidBD',
+			label: 'KDStream',
 			ads: 'false',
 			url: generateUrl('vidsrc.cc/v3', type, id, seasonNumber, episodeNumber),
 		},
+
 		{
-			name: 'smashystream',
+			name: 'SmashyStream',
 			label: 'SmashyStream',
 			ads: 'false',
 			url:
@@ -61,28 +75,16 @@ export default function Episode(props: EpisodeProps) {
 		},
 		
 		{
-			name: 'vidbinge',
-			label: 'Vidbinge',
+			name: 'AutoEmbe',
+			label: 'FilmL',
 			ads: 'false',
-			url: generateUrl('vidbinge.dev', type, id, seasonNumber, episodeNumber),
+			url:
+				type === 'movie'
+					? `https://player.autoembed.cc/embed/movie/${id}`
+					: `https://player.smashy.stream/tv/${id}?s=${seasonNumber}&e=${episodeNumber}`,
 		},
 	
-
-		
-		{
-			name: 'vidsrc.vip',
-			label: 'Lstream',
-			position: 4,
-			url: generateUrl('vidsrc.vip', type, id, seasonNumber, episodeNumber),
-		},
-
-		{
-			name: 'vidsrc.pro',
-			label: 'VidSRC',
-			position: 1,
-			url: generateUrl('vidsrc.pro', type, id, seasonNumber, episodeNumber),
-		},
-
+	
 		
 
 	];
@@ -125,7 +127,9 @@ export default function Episode(props: EpisodeProps) {
 						<SelectValue>
 							<div className="pr-10">{provider.label}</div>
 						</SelectValue>
+						
 					</SelectTrigger>
+					
 					<SelectContent>
 						{sourcesMap.map((source, index) => (
 							<SelectItem value={source.name} key={index}>
@@ -133,6 +137,7 @@ export default function Episode(props: EpisodeProps) {
 							</SelectItem>
 						))}
 					</SelectContent>
+
 				</Select>
 				{getNextEp && type === 'tv' && (
 					<Button
@@ -160,7 +165,8 @@ export default function Episode(props: EpisodeProps) {
 				allowFullScreen
 				className="w-full h-full border-primary border rounded-lg aspect-video font-mono"
 				src={provider.url}
-			/>
+			/> 
+			
 		</div>
 	);
 }

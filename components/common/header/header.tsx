@@ -38,7 +38,7 @@ export const Header = () => {
 		<div className="sticky top-0 z-50 backdrop-blur-sm"
 			style={{ backgroundColor: "rgba(12, 12, 12, 0.5)" }}>
 
-			<div className="flex gap-4 items-center mx-auto max-w-9xl  justify-between flex-row my-3 z-30">
+			<div className="flex gap-4 items-center mx-auto max-w-7xl  justify-between flex-row my-3 z-30">
 				<Link
 					key={'/'}
 					className="cursor-pointer w-fit whitespace-nowrap z-40 relative"
