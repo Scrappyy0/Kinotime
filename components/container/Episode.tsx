@@ -33,13 +33,9 @@ export default function Episode(props: EpisodeProps) {
 			: `https://${domain}/embed/tv/${id}/${seasonNumber}/${episodeNumber}`;
 	};
 	const sourcesMap = [
-		{
-			name: 'vidbinge',
-			label: 'Vidbinge',
-			ads: 'false',
-			url: generateUrl('vidbinge.dev', type, id, seasonNumber, episodeNumber),
-		},
-	
+		
+
+
 		{
 			name: 'vidlink',
 			label: 'VidLink',
@@ -49,12 +45,15 @@ export default function Episode(props: EpisodeProps) {
 					? `https://vidlink.pro/movie/${id}`
 					: `https://vidlink.pro/tv/${id}/${seasonNumber}/${episodeNumber}?title=true`,
 		},
+
 		{
 			name: 'vidsrc.xyz',
 			label: 'VidSRC',
 			position: 5,
 			url: generateUrl('vidsrc.to', type, id, seasonNumber, episodeNumber),
 		},
+		
+	
 		
 
 		{
