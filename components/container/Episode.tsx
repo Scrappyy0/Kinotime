@@ -35,6 +35,13 @@ export default function Episode(props: EpisodeProps) {
 	const sourcesMap = [
 		
 
+		{
+			name: 'vidsrc.xyz',
+			label: 'VidSRC',
+			position: 5,
+			url: generateUrl('vidsrc.to', type, id, seasonNumber, episodeNumber),
+		},
+		
 
 		{
 			name: 'vidlink',
@@ -46,16 +53,8 @@ export default function Episode(props: EpisodeProps) {
 					: `https://vidlink.pro/tv/${id}/${seasonNumber}/${episodeNumber}?title=true`,
 		},
 
-		{
-			name: 'vidsrc.xyz',
-			label: 'VidSRC',
-			position: 5,
-			url: generateUrl('vidsrc.to', type, id, seasonNumber, episodeNumber),
-		},
-		
 	
-		
-
+	
 		{
 			name: 'vidsrc.cc/v3',
 			label: 'KDStream',
